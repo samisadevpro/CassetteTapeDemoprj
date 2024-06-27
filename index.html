@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <title>Cassette Tape - Clear Your Deck</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <a href="#" class="logoimg">
+                <img src="img/alogo.png" alt="logo">
+            </a>
+        </div>
+        <!-- Navigation Bar -->
+        <nav class="nav-bar">
+            <div class="menu">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+                <div class="line line-3"></div>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#promotion" class="nav-link">Promotion</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#support" class="nav-link">Support</a></li>
+                <li class="nav-item"><a href="#corporate" class="nav-link">Corporate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Promotion Section -->
+    <section id="promotion" class="middle">
+        <h2 class="same-text">Special Promotion</h2>
+        <p class="h-para">Step back in time with our vintage cassette tapes! For a limited time, we are offering a special promotion:</p>
+        
+        <div class="promotion-details">
+            <img src="img/rare.png" alt="Special Promotion Cassette Tape">
+            <div class="promotion-text">
+                <p>Buy one cassette tape and get the second one for half price!</p>
+                <p>Price: $10.99 each</p>
+                <p>Hurry! This offer is valid until 12/25/2023. <br> Don't miss the chance to relive the classic era of music.</p>
+            </div>
+        </div>
+
+        <div id="rating">
+            <p>Rate this product:</p>
+            <label for="rating-input">Rating:</label>
+            <input type="range" id="rating-input" min="1" max="5" step="1" oninput="updateRatingValue(this.value)">
+            <div class="rating-box" id="rating-box">3</div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="middle">
+        <h2 class="same-text">About the Cassette Tape</h2>
+        <div class="about-details">
+            <img src="img/about.png" alt="About Cassette Tape">
+            <p>Compact, portable, and user-friendly, our cassette tapes were a revolutionary medium for music lovers. From mixtapes to chart-topping albums, cassette tapes played a significant role in shaping the way we experienced music.</p>
+        </div>
+        <p>Rediscover the magic of the cassette tape, a true icon of the music industry. Our vintage cassette tapes bring back the golden era of music listening, providing a unique and nostalgic experience for audiophiles and music enthusiasts.</p>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="middle">
+        <h2 class="same-text">Support</h2>
+        <p>Need assistance or have a question? <br>Fill out the form below, and we'll get back to you:</p>
+        <form id="support-form">
+            <label for="name">Name :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required placeholder="xyz#gmail.com">
+
+            <label for="tel">Phone :</label>
+            <input type="tel" id="tel" name="tel" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <!-- Corporate Section -->
+    <section id="corporate" class="middle">
+        <h2 class="same-text">Corporate Information</h2>
+        <p>Learn more about the company behind Cassette Tape - Clear Your Deck</p>
+        <div class="corporate-details">
+            <p>Cassette Tape Nostalgia is dedicated to preserving the rich history of music and audio technology. Our mission is to bring back the joy of cassette tapes to a new generation of music enthusiasts.</p>
+            <img src="img/alogo.png" alt="Company Logo">
+        </div>
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p>Email: info@cassettenostalgia.com</p>
+            <p>Phone: +1 (437) 123-4567</p>
+            <p>Address: 123 You go free, Chelway Road, Canada</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        &copy;2024 Cassette Tape	
+    </footer>
+  </div>
+
+  <!-- JavaScript file -->
+  <script src="js/main.js"></script>
+</body>
+</html>

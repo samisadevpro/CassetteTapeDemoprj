@@ -1,0 +1,399 @@
+/* Reset and basic styling */
+@import url('https://fonts.googleapis.com/css2?family=Miltonian+Tattoo&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300&display=swap');
+*,
+*::after,
+*::before
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Remove underline from links */
+a
+{
+    text-decoration: none;
+}
+
+/* Remove default list styles */
+li{
+    list-style: none;
+}
+
+/* Body styling */
+body
+{
+    font-family: 'Roboto', sans-serif;
+    color: #F2E7D5;
+}
+
+/* Main container styling */
+.container
+{
+    background: #393E46;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Header styling */
+.header
+{
+    padding: 20px;
+}
+
+/* Logo styling */
+.logo
+{
+    max-width: 80px;
+    position: fixed;
+}
+
+.logo::after
+{
+    /* Logo text after styling */
+    position: absolute;
+    content: "Cassette Tape";
+    white-space: nowrap;
+    color: #000;
+    bottom: 17px;
+    left: 5px;
+    font-size: .1em;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 2s ease-in;
+}
+
+.logo img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.logo:hover img
+{
+    /* Logo image hover animation */
+    animation: rotating 2s ease-in;
+}
+
+.logo:hover.logo::after
+{
+    /* Logo text hover styling */
+    left: 85px;
+    color: red;
+    font-size: 1.3em;
+    color: #F7F7F7;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px #6D9886;
+    font-weight: 300;
+}
+
+/* Navigation bar styling */
+.nav-bar
+{
+    width: 300px;
+    height: 100%;
+    background: #6D9886;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 80% 0 0 80%;
+    transition: right .8s cubic-bezier(1,0,0,1);
+}
+
+/* Change class for navigation bar animation */
+.change{
+    right: 0;
+}
+
+.nav-lists{
+    text-align: right;
+}
+
+/* Navigation item styling */
+.nav-item
+{
+    margin: 25px;
+}
+
+.nav-item .nav-link
+{
+    color: #F7F7F7;
+    font-size: 1.3em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 3px 0;
+}
+
+.nav-item .nav-link::before,
+.nav-item .nav-link::after
+{
+    content: "";
+    width: 100px;
+    height: 2px;
+    background-color: #F7F7F7;
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.nav-item .nav-link:after{
+    bottom: 0 ;
+    transform-origin: right;
+}
+
+.nav-item .nav-link::before
+{
+    top: 0;
+    transform-origin: left;
+}
+
+.nav-link:hover::after,
+.nav-link:hover::before{
+    transform: scaleX(1);
+}
+
+/* Menu styling */
+.menu
+{
+    width: 35px;
+    height: 38px;
+    position: fixed;
+    top:50px;
+    right: 50px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.line
+{
+    width: 100%;
+    height: 3px;
+    border-radius: 20px;
+    background: #F2E7D5;
+    transition: all 0.8s;
+}
+
+.change .line-1
+{
+    transform: rotate(-405deg) translate(-8px,6px);
+}
+
+.change .line-2
+{
+    opacity: 0;
+}
+
+.change .line-3
+{
+    transform: rotate(405deg) translate(-10px,-9px);
+}
+
+/* Middle section styling */
+.middle 
+{
+    height: 100vh;
+    background: #393E46;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Headings in the middle section styling */
+h2.same-text 
+{
+    font-family: 'Miltonian Tattoo', serif;
+    letter-spacing: 2px;
+    font-size: 2.3em;
+}
+
+/* Promotion section styling */
+#promotion .h-para
+{
+    margin: 20px ;
+    color: red;
+    font-family: 'Miltonian Tattoo', serif;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.promotion-details
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.promotion-details img{
+    max-width:300px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in;
+    margin: 30px;
+}
+
+.promotion-details img:hover 
+{
+    transform: scale(1.1);
+}
+
+.promotion-text
+{
+    text-align: justify;
+    text-justify: inter-word;
+    font-family: monospace;
+}
+
+/* Rating section styling */
+#rating 
+{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 1px;
+}
+
+.rating-box {
+
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: .9em;
+    background-color: #6D9886;
+    border-radius: 5px;
+    margin-left: 10px;
+    color: #fff;
+}
+
+/* About section styling */
+#about {
+    text-align: center;
+    width: 100%; 
+    padding: 30px;
+    gap: 20px;
+}
+
+#about p 
+{
+    text-align: justify;
+    max-width: 700px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+#about h2 
+{
+    margin: 20px;
+}
+
+.about-details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: justify;
+    width: 100%;
+}
+
+.about-details img 
+{
+    width: 200px;
+}
+
+/* Support section styling */
+#support p{
+
+    margin: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+#support-form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#support-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+#support-form input,
+#support-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background: #fff;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+}
+
+#support-form input::placeholder
+{
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#support-form input[type="submit"] {
+    background-color: #6D9886;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+}
+
+/* Corporate section styling */
+#corporate p{
+    margin: 10px;
+    letter-spacing: 1.4px;
+}
+
+.corporate-details
+{
+    display: flex  ;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.contact-info
+{
+    color: #EE7214;
+}
+
+.corporate-details img
+{
+    width: 80px;
+}
+
+/* Footer styling */
+footer 
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EE7214;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1.4px;
+    height: 10vh;
+    font-size: 1.2em;
+    font-size: 900;
+}
